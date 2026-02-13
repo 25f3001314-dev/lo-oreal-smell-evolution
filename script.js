@@ -614,3 +614,15 @@ if (document.readyState === 'loading') {
 } else {
     initApp();
 }
+
+// Booking form interactivity
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('booking-form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for booking your session! We will contact you soon.');
+            form.reset();
+        });
+    }
+});
